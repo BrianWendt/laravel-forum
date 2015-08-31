@@ -24,7 +24,7 @@
     $('[data-method]:not(.disabled)').click(function(event) {
         $('<form action="' + $(this).attr('href') + '" method="POST">' +
         '<input type="hidden" name="_method" value="' + $(this).data('method') + '">' +
-        '<input type="hidden" name="_token" value="{!! Session::getToken() !!}"' +
+        '<input type="hidden" name="_token" value="{!! Session::getToken() !!}">' +
         '</form>').submit();
 		
         event.preventDefault();
